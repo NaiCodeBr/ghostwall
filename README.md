@@ -1,475 +1,421 @@
 <div align="center">
 
-![GHOSTWALL Banner](assets/logo.png)
+<img src="./logo.png" width="300" alt="GhostWall Logo"/>
 
-# 🔒 GHOSTWALL
+# GhostWall
 
 ### Open Source RF Privacy Firewall
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![License: Apache-2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Rust](https://img.shields.io/badge/Rust-1.75%2B-orange.svg)](https://www.rust-lang.org/)
-[![Platform](https://img.shields.io/badge/Platform-Linux%20%7C%20macOS%20%7C%20Windows-lightgrey.svg)]()
+**Visibility • Auditing • Exposure Assessment for RF Sensing Environments**
 
-[Documentation](https://github.com/NaiCodeBr/ghostwall/tree/main/docs) | [API Reference](https://github.com/NaiCodeBr/ghostwall/blob/main/docs/API.md) | [Installation Guide](https://github.com/NaiCodeBr/ghostwall/blob/main/docs/INSTALLATION.md) | [Roadmap](https://github.com/NaiCodeBr/ghostwall/blob/main/docs/ROADMAP.md)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/Status-Active%20Development-green.svg)]()
+[![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange.svg)]()
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success.svg)]()
 
 </div>
 
 ---
 
-## 📋 Sobre o Projeto
+## Overview
 
-**GHOSTWALL** é uma plataforma Open Source multiplataforma focada em auditoria, detecção, análise e monitoramento de infraestruturas compatíveis com Wi-Fi Sensing, Channel State Information (CSI), Radio Sensing e tecnologias relacionadas.
+GhostWall is an Open Source RF Privacy Firewall designed to help individuals, researchers, security professionals and organizations understand their exposure to modern RF sensing technologies.
 
-### ⚠️ Aviso Importante
+The project focuses on:
 
-Este sistema **NÃO** afirma detectar especificamente RuView ou qualquer solução proprietária. O sistema identifica indicadores técnicos compatíveis com arquiteturas de sensoriamento RF.
+- RF visibility
+- Wi-Fi sensing exposure assessment
+- Device discovery
+- Infrastructure auditing
+- Risk scoring
+- RF privacy awareness
 
-### 🎯 Missão
+GhostWall does **not** claim to detect espionage or identify specific proprietary systems.
 
-Construir o primeiro Firewall de Privacidade RF Open Source, capaz de:
-
-- 🔍 **Descobrir dispositivos RF** - Mapeamento completo do ambiente RF
-- 📡 **Identificar dispositivos compatíveis com CSI** - Detecção de hardware ESP32-S3, ESP32-C6, Broadcom
-- 📊 **Avaliar risco de exposição RF** - Scoring 0-100 baseado em métricas
-- 🎯 **Detectar padrões compatíveis com Wi-Fi Sensing** - Análise comportamental
-- 📈 **Produzir score de risco e exposição** - RSIE Engine com 7 regras
-- 📄 **Gerar relatórios técnicos** - JSON, HTML, PDF
-- 💻 **Operar localmente** - Privacidade preservada
-- 🔒 **Não depender de nuvem** - Funcionalidades principais offline
+Instead, it analyzes measurable indicators associated with infrastructures that may be compatible with Wi-Fi sensing and RF-based monitoring technologies.
 
 ---
 
-## 🏗️ Estrutura do Projeto
+## Why GhostWall?
 
+Recent advances in wireless sensing technologies allow environments to be analyzed using radio signals.
+
+Research in areas such as:
+
+- Wi-Fi Sensing
+- Channel State Information (CSI)
+- Device-Free Sensing
+- Radio Tomographic Imaging
+- RF Fingerprinting
+
+has demonstrated that movement, occupancy and environmental changes can be inferred from wireless signals.
+
+GhostWall was created to provide transparency, visibility and risk assessment for these environments.
+
+---
+
+## Project Status
+
+⚠️ Experimental Research Project
+
+GhostWall is currently under active development.
+
+Features, detection models and scoring algorithms may evolve as research progresses.
+
+| Feature | Status |
+|----------|---------|
+| Dashboard | ✅ Implemented |
+| Device Inventory | ✅ Implemented |
+| RSIE Engine | ✅ Implemented |
+| Alert Center | ✅ Implemented |
+| Reporting Engine | ✅ Implemented |
+| RF Exposure Scoring | ✅ Implemented |
+| Threat Intelligence | 🚧 In Progress |
+| RF Discovery Engine | 🚧 In Progress |
+| RF Fingerprinting | 🚧 In Progress |
+| Router Agent (OpenWRT) | 📋 Planned |
+| Mobile Application | 📋 Planned |
+| Community Signatures | 📋 Planned |
+
+---
+
+# Core Principles
+
+GhostWall is built around four principles:
+
+### Visibility
+
+Understand what RF-capable devices exist within an environment.
+
+### Transparency
+
+Provide evidence-based analysis rather than assumptions.
+
+### Privacy
+
+Keep data processing local whenever possible.
+
+### Research
+
+Advance understanding of RF sensing exposure through open collaboration.
+
+---
+
+# What GhostWall Does
+
+### RF Discovery
+
+Identify devices visible within the environment.
+
+Examples:
+
+- Access Points
+- ESP32 Devices
+- Raspberry Pi Systems
+- Wireless IoT Devices
+- RF Infrastructure Components
+
+---
+
+### RF Exposure Assessment
+
+Evaluate environmental characteristics that may facilitate RF sensing.
+
+Examples:
+
+- Coverage density
+- Device placement
+- RF propagation conditions
+- Infrastructure concentration
+
+---
+
+### RSIE Engine
+
+RF Sensing Indicators of Exposure.
+
+GhostWall evaluates indicators associated with infrastructures commonly used in RF sensing research.
+
+Examples:
+
+- CSI-compatible hardware
+- Multi-node deployments
+- Continuous operation patterns
+- MQTT telemetry
+- UDP telemetry flows
+
+---
+
+### Device Inventory
+
+Maintain a centralized inventory of observed devices.
+
+Collected information may include:
+
+- MAC Address
+- Vendor
+- RSSI
+- Channel
+- Device Type
+- Risk Indicators
+
+---
+
+### Reporting Engine
+
+Generate professional reports in:
+
+- HTML
+- JSON
+- PDF (planned)
+
+Reports include:
+
+- Exposure Scores
+- Risk Indicators
+- Device Inventory
+- Recommendations
+
+---
+
+### Threat Intelligence
+
+Local and community-driven RF signature database.
+
+Supports:
+
+- Signature Versioning
+- Integrity Validation
+- Community Research Contributions
+
+---
+
+# RSIE Rules
+
+GhostWall uses the RF Sensing Indicators of Exposure framework.
+
+Current baseline indicators include:
+
+| Rule | Description |
+|--------|------------|
+| GW-RF-001 | CSI-compatible hardware detected |
+| GW-RF-002 | Multiple compatible devices present |
+| GW-RF-003 | Continuous operational profile |
+| GW-RF-004 | High-frequency UDP telemetry |
+| GW-RF-005 | MQTT telemetry patterns |
+| GW-RF-010 | Potential sensing cluster characteristics |
+| GW-FP-001 | False positive reduction |
+
+These indicators contribute to overall risk and exposure scoring.
+
+---
+
+# Architecture
+
+```text
+Dashboard
+    │
+    ▼
+REST API
+    │
+    ▼
+RSIE Engine
+    │
+    ├── Device Inventory
+    ├── Threat Intelligence
+    ├── Reporting Engine
+    └── Exposure Assessment
 ```
-ghostwall/
-├── .github/
-│   └── workflows/           # CI/CD GitHub Actions
-│       ├── ci.yml           # Pipeline de CI
-│       └── release.yml      # Pipeline de Release
-├── core/                    # Tipos e utilitários principais
-│   ├── src/
-│   │   ├── device.rs        # Estrutura de dispositivo RF
-│   │   ├── risk.rs          # Sistema de scoring de risco
-│   │   ├── exposure.rs      # Sistema de scoring de exposição
-│   │   ├── fingerprint.rs  # Assinaturas comportamentais
-│   │   └── error.rs         # Tratamento de erros
-│   └── tests/               # Testes unitários
-├── scanner/                 # Módulo 1: RF Discovery Engine
-│   ├── src/
-│   │   ├── discovery.rs     # Engine de descoberta
-│   │   ├── linux.rs         # Implementação Linux (iw/nl80211)
-│   │   ├── macos.rs         # Implementação macOS (CoreWLAN)
-│   │   ├── windows.rs       # Implementação Windows (Npcap)
-│   │   └── fingerprint.rs   # Módulo 2: RF Fingerprint Engine
-│   └── Cargo.toml
-├── risk-engine/             # Módulo 3: RSIE Engine
-│   ├── src/
-│   │   └── lib.rs           # Motor de scoring com 7 regras
-│   └── tests/
-├── storage/                 # Banco de dados e Módulo 4
-│   ├── src/
-│   │   ├── lib.rs           # Operações SQLite
-│   │   ├── exposure.rs      # RF Exposure Scanner
-│   │   └── schema.rs        # Schema do banco
-│   └── Cargo.toml
-├── threat-intel/            # Módulo 5: Threat Intelligence
-│   ├── src/
-│   │   └── lib.rs           # Banco de assinaturas
-│   └── tests/
-├── reporting/               # Módulo 6: Report Engine
-│   ├── src/
-│   │   └── lib.rs           # Geração JSON/HTML/PDF
-│   └── tests/
-├── api/                     # REST API
-│   ├── src/
-│   │   ├── main.rs          # Entry point
-│   │   ├── lib.rs           # Router
-│   │   ├── handlers.rs      # API handlers
-│   │   └── state.rs         # Estado compartilhado
-│   └── Cargo.toml
-├── dashboard/               # Frontend Desktop
-│   ├── src/
-│   │   ├── main.tsx         # Entry point
-│   │   ├── App.tsx          # Componente principal
-│   │   ├── components/
-│   │   │   └── Sidebar.tsx  # Navegação
-│   │   └── pages/
-│   │       ├── Overview.tsx
-│   │       ├── Devices.tsx
-│   │       ├── ExposureMap.tsx
-│   │       ├── Threats.tsx
-│   │       ├── Alerts.tsx
-│   │       ├── Reports.tsx
-│   │       └── Settings.tsx
-│   ├── package.json
-│   ├── tsconfig.json
-│   ├── tailwind.config.js
-│   └── index.html
-├── mobile/                  # App Mobile (Flutter)
-│   ├── lib/
-│   │   ├── main.dart
-│   │   ├── providers/
-│   │   │   └── device_provider.dart
-│   │   └── screens/
-│   │       └── home_screen.dart
-│   └── pubspec.yaml
-├── router-agent/            # Agent para roteadores
-│   ├── src/
-│   │   ├── lib.rs           # Agent logic
-│   │   └── main.rs          # Entry point
-│   └── Cargo.toml
-├── docker/                  # Configuração Docker
-│   ├── Dockerfile
-│   ├── docker-compose.yml
-│   └── .dockerignore
-├── docs/                    # Documentação
-│   ├── ARCHITECTURE.md      # Arquitetura detalhada
-│   ├── API.md               # Referência da API
-│   ├── THREAT_MODEL.md      # Modelo de ameaças
-│   ├── ROADMAP.md           # Roadmap do projeto
-│   ├── INSTALLATION.md      # Guia de instalação
-│   └── COMPLIANCE_CHECK.md  # Verificação de conformidade
-├── Cargo.toml               # Workspace configuration
-├── Cargo.lock               # Lock file
-├── LICENSE                  # MIT OR Apache-2.0
-├── .gitignore               # Git ignore rules
-└── README.md                # Este arquivo
-```
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+# Technology Stack
 
-### Backend
-- **[Rust 1.75+](https://www.rust-lang.org/)** - Linguagem principal (performance, memory safety)
-- **[Axum](https://github.com/tokio-rs/axum)** - Framework web async
-- **[SQLite](https://www.sqlite.org/)** - Banco de dados local
-- **[Tokio](https://tokio.rs/)** - Runtime async
-- **[Serde](https://serde.rs/)** - Serialização/deserialização
-- **[Tracing](https://github.com/tokio-rs/tracing)** - Logging estruturado
+## Frontend
 
-### Frontend Desktop
-- **[Tauri](https://tauri.app/)** - Framework desktop (alternativa leve ao Electron)
-- **[React 18](https://react.dev/)** - Biblioteca UI
-- **[TypeScript](https://www.typescriptlang.org/)** - Type safety
-- **[TailwindCSS](https://tailwindcss.com/)** - CSS utility-first
-- **[Lucide React](https://lucide.dev/)** - Ícones
-- **[React Router](https://reactrouter.com/)** - Routing
+- React
+- TypeScript
+- Vite
 
-### Mobile
-- **[Flutter](https://flutter.dev/)** - App multiplataforma
-- **[Provider](https://pub.dev/packages/provider)** - State management
-- **[HTTP](https://pub.dev/packages/http)** - Cliente HTTP
+## Backend
 
-### DevOps
-- **[Docker](https://www.docker.com/)** - Containerização
-- **[GitHub Actions](https://github.com/features/actions)** - CI/CD
+- Node.js
+- Express
+
+## Database
+
+- Local Storage Layer
+- Drizzle ORM
+
+## Future Stack
+
+- Rust Core Engine
+- OpenWRT Agent
+- Mobile Client
+- PostgreSQL Support
 
 ---
 
-## 🔒 Requisitos de Segurança
+# Screenshots
 
-- ✅ **Processamento local por padrão** - Nenhum dado enviado sem consentimento
-- ✅ **TLS 1.3** - Comunicação segura
-- ✅ **AES-256-GCM** - Criptografia de dados em repouso
-- ✅ **Ed25519** - Assinaturas digitais
-- ✅ **SHA-256** - Hashing
-- ✅ **Privacidade preservada** - Configuração sensível criptografada
+## Dashboard
+
+Coming Soon
 
 ---
 
-## 🚀 Instalação Rápida
+## Exposure Map
 
-### Pré-requisitos
+Coming Soon
 
-- [Rust 1.75+](https://rustup.rs/)
-- [Node.js 18+](https://nodejs.org/)
-- [Docker](https://www.docker.com/) (opcional)
-- [Flutter SDK](https://flutter.dev/docs/get-started/install) (para mobile)
+---
 
-### Backend
+## Device Inventory
+
+Coming Soon
+
+---
+
+# Installation
+
+## Clone Repository
 
 ```bash
-# Clonar repositório
 git clone https://github.com/NaiCodeBr/ghostwall.git
 cd ghostwall
-
-# Build
-cargo build --release
-
-# Executar API
-cd api
-cargo run --bin ghostwall-api
 ```
 
-API disponível em `http://localhost:8080`
-
-### Dashboard Desktop
+## Install Dependencies
 
 ```bash
-cd dashboard
 npm install
-npm run tauri dev
 ```
 
-### Mobile
+## Start Development Environment
 
 ```bash
-cd mobile
-flutter pub get
-flutter run
+npm run dev
 ```
 
-### Docker
+Application will be available at:
 
-```bash
-cd docker
-docker-compose up -d
+```text
+http://localhost:3000
 ```
 
 ---
 
-## 📖 Uso
+# Security Philosophy
 
-### API Endpoints
+GhostWall follows a privacy-first approach.
 
-| Método | Endpoint | Descrição |
-|--------|----------|-----------|
-| GET | `/api/health` | Health check |
-| POST | `/api/scan` | Iniciar varredura RF |
-| GET | `/api/devices` | Listar dispositivos |
-| GET | `/api/devices/:id` | Detalhes do dispositivo |
-| POST | `/api/risk/evaluate` | Avaliar risco |
-| GET | `/api/exposure` | Score de exposição |
-| POST | `/api/reports` | Gerar relatório |
-| GET | `/api/threat-intel` | Threat intelligence |
+Goals:
 
-### Exemplo de Uso
+- Local-first processing
+- Minimal data collection
+- Transparent analysis
+- Open-source reviewability
 
-```bash
-# Health check
-curl http://localhost:8080/api/health
-
-# Iniciar scan
-curl -X POST http://localhost:8080/api/scan
-
-# Listar dispositivos
-curl http://localhost:8080/api/devices
-
-# Avaliar risco
-curl -X POST http://localhost:8080/api/risk/evaluate \
-  -H "Content-Type: application/json" \
-  -d '{"device_id": "uuid"}'
-
-# Gerar relatório
-curl -X POST http://localhost:8080/api/reports \
-  -H "Content-Type: application/json" \
-  -d '{"format": "html"}'
-```
+Cryptographic protections and secure communications will continue to evolve as the platform matures.
 
 ---
 
-## 🧩 Módulos
+# Non Goals
 
-### Módulo 1: RF Discovery Engine
+GhostWall is NOT:
 
-Descobre dispositivos RF no ambiente:
-- Dispositivos Wi-Fi
-- Fabricantes (OUI)
-- Access Points
-- ESP32, Raspberry Pi, Broadcom
+- A Wi-Fi jammer
+- A radio interference tool
+- A surveillance platform
+- A proof-of-espionage detector
+- A CSI collection framework
+- A signal disruption system
+- A tool to identify specific proprietary platforms
 
-**Coleta:** MAC, Vendor, SSID, BSSID, RSSI, Canal, Segurança, Tempo online
-
-**Plataformas:**
-- Linux: `iw`, `nl80211`
-- macOS: CoreWLAN
-- Windows: Npcap
-
-### Módulo 2: RF Fingerprint Engine
-
-Cria assinaturas comportamentais:
-- Beacon Interval
-- Channel Utilization
-- RSSI Stability
-- Broadcast Frequency
-- Probe Requests
-
-### Módulo 3: RSIE Engine
-
-Motor de scoring baseado em regras:
-
-| Regra | Descrição | Score |
-|-------|-----------|-------|
-| GW-RF-001 | Hardware compatível com CSI | +10 |
-| GW-RF-002 | 3+ dispositivos Espressif | +25 |
-| GW-RF-003 | Operação contínua | +15 |
-| GW-RF-004 | UDP pequenos e frequentes | +20 |
-| GW-RF-005 | Telemetria MQTT | +10 |
-| GW-RF-010 | Cluster de sensoriamento | +50 |
-| GW-FP-001 | Equipamento conhecido | -20 |
-
-### Módulo 4: RF Exposure Scanner
-
-Avalia facilidade de sensoriamento RF (0-100):
-- Cobertura Wi-Fi
-- Quantidade de APs
-- Distribuição espacial
-- Densidade RF
-- Quantidade de dispositivos
-
-### Módulo 5: Threat Intelligence
-
-Banco comunitário de assinaturas:
-- Vendor
-- Fingerprint
-- Risk Score
-- Tags
-- Atualização automática
-- Assinaturas versionadas
-
-### Módulo 6: Report Engine
-
-Gera relatórios em:
-- JSON
-- HTML
-- PDF
-
-**Conteúdo:**
-- Inventário completo
-- Score de Risco
-- Score de Exposição
-- Dispositivos Suspeitos
-- Recomendações automáticas
+GhostWall focuses on visibility and exposure assessment.
 
 ---
 
-## 💻 Dashboard
+# Roadmap
 
-O dashboard desktop inclui 7 páginas:
+## Version 0.1
 
-- **Overview** - Visão geral e estatísticas
-- **Devices** - Lista de dispositivos descobertos
-- **Exposure Map** - Mapa de exposição RF
-- **Threats** - Threat intelligence
-- **Alerts** - Alertas por nível (Info, Baixo, Médio, Alto, Crítico)
-- **Reports** - Geração e download de relatórios
-- **Settings** - Configurações e privacidade
+- Dashboard
+- RSIE Engine
+- Device Inventory
+- Reporting
 
----
+## Version 0.5
 
-## 🧪 Desenvolvimento
+- Threat Intelligence
+- Community Signatures
+- Enhanced Discovery
 
-### Testes
+## Version 1.0
 
-```bash
-# Executar todos os testes
-cargo test
-
-# Testes com output
-cargo test -- --nocapture
-
-# Testes específicos
-cargo test --package ghostwall-core
-```
-
-### Formatação
-
-```bash
-cargo fmt
-```
-
-### Lint
-
-```bash
-cargo clippy
-```
-
-### Build Release
-
-```bash
-cargo build --release
-```
+- OpenWRT Agent
+- Mobile Applications
+- Distributed Analysis
+- Advanced RF Exposure Assessment
 
 ---
 
-## 🤝 Contribuição
+# Contributing
 
-Contribuições são bem-vindas! Por favor:
+Contributions are welcome.
 
-1. Fork o projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+Areas of interest:
 
-### Código de Conduta
+- RF Research
+- Wireless Networking
+- Security Engineering
+- Privacy Technologies
+- Open Source Development
 
-- Seja respeitoso
-- Use linguagem apropriada
-- Não faça afirmações sem evidência técnica
-- Siga as regras de linguagem especificadas
+Please review:
 
----
+- CONTRIBUTING.md
+- SECURITY.md
+- CODE_OF_CONDUCT.md
 
-## 📄 Licença
-
-Este projeto está licenciado sob as licenças **MIT** ou **Apache-2.0** - você pode escolher.
-
-### MIT License
-
-Copyright (c) 2024 GHOSTWALL Contributors
-
-### Apache-2.0 License
-
-Copyright (c) 2024 GHOSTWALL Contributors
-
-Licensed under the Apache License, Version 2.0
+before submitting pull requests.
 
 ---
 
-## 📚 Documentação
+# Research References
 
-- [Arquitetura](docs/ARCHITECTURE.md) - Detalhes da arquitetura
-- [API Reference](docs/API.md) - Documentação completa da API
-- [Threat Model](docs/THREAT_MODEL.md) - Modelo de ameaças
-- [Installation Guide](docs/INSTALLATION.md) - Guia detalhado de instalação
-- [Roadmap](docs/ROADMAP.md) - Planos futuros
-- [Compliance Check](docs/COMPLIANCE_CHECK.md) - Verificação de conformidade
+The project is inspired by publicly available research and open-source initiatives in:
 
----
+- Wi-Fi Sensing
+- Channel State Information (CSI)
+- RF Fingerprinting
+- Device-Free Sensing
+- Wireless Environmental Monitoring
 
-## 🔗 Referências
+Examples:
 
-- [RuView](https://github.com/ruvnet/RuView) - Referência inicial
-- [ESP32-CSI-Tool](https://github.com/StevenMHernandez/ESP32-CSI-Tool) - CSI em ESP32
-- [Nexmon CSI](https://github.com/seemoo-lab/nexmon_csi) - CSI em Broadcom
+- https://github.com/ruvnet/RuView
+- https://github.com/StevenMHernandez/ESP32-CSI-Tool
+- https://github.com/seemoo-lab/nexmon_csi
 
----
-
-## ⚠️ Aviso Legal
-
-Este software é fornecido "como está", sem garantia de qualquer tipo. Os autores não são responsáveis pelo uso indevido deste software.
-
-**Uso Responsável:**
-- Este ferramenta deve ser usada apenas para fins legítimos de segurança
-- Não use para monitorar redes sem autorização
-- Respeite as leis de privacidade locais
+GhostWall is an independent project and is not affiliated with any of the above initiatives.
 
 ---
 
-## 🌟 Star History
+# License
 
-[![Star History Chart](https://api.star-history.com/svg?repos=NaiCodeBr/ghostwall&type=Date)](https://star-history.com/#NaiCodeBr/ghostwall&Date)
+Released under the MIT License.
+
+See LICENSE for details.
 
 ---
 
 <div align="center">
 
-**[⬆ Voltar ao topo](#-ghostwall)**
+### GhostWall
 
-Made with ❤️ by NaiCodeBr
+Open Source RF Privacy Firewall
+
+Built for visibility, transparency and RF privacy research.
 
 </div>
