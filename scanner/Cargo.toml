@@ -1,0 +1,29 @@
+[package]
+name = "ghostwall-scanner"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "RF Discovery Engine for GHOSTWALL"
+
+[dependencies]
+ghostwall-core = { path = "../core" }
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+pnet.workspace = true
+nix.workspace = true
+chrono.workspace = true
+uuid.workspace = true
+
+[target.'cfg(target_os = "linux")'.dependencies]
+nix.workspace = true
+
+[target.'cfg(target_os = "windows")'.dependencies]
+pnet.workspace = true
+
+[target.'cfg(target_os = "macos")'.dependencies]

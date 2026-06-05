@@ -1,0 +1,21 @@
+[package]
+name = "ghostwall-router-agent"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Router Agent for GHOSTWALL - Deploy on routers for continuous monitoring"
+
+[dependencies]
+ghostwall-core = { path = "../core" }
+ghostwall-scanner = { path = "../scanner" }
+ghostwall-risk-engine = { path = "../risk-engine" }
+ghostwall-storage = { path = "../storage" }
+tokio.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true

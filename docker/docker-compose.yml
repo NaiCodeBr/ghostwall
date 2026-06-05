@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  ghostwall-api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ghostwall-data:/app/data
+    environment:
+      - RUST_LOG=info
+    restart: unless-stopped
+
+volumes:
+  ghostwall-data:
