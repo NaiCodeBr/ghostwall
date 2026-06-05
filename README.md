@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./logo.png" width="300" alt="GhostWall Logo"/>
+<img src="./logo.png" width="520" alt="GhostWall Logo"/>
 
 # GhostWall
 
@@ -9,190 +9,146 @@
 **Visibility • Auditing • Exposure Assessment for RF Sensing Environments**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active%20Development-green.svg)]()
-[![Platform](https://img.shields.io/badge/Platform-Cross--Platform-orange.svg)]()
+[![Status](https://img.shields.io/badge/Status-Active%20Development-success.svg)]()
+[![Rust](https://img.shields.io/badge/Rust-Backend-orange.svg)]()
+[![Tauri](https://img.shields.io/badge/Tauri-Desktop-blue.svg)]()
+[![Flutter](https://img.shields.io/badge/Flutter-Mobile-42A5F5.svg)]()
 [![Open Source](https://img.shields.io/badge/Open%20Source-Yes-success.svg)]()
+
+### Understanding RF Exposure Through Visibility, Research and Privacy
 
 </div>
 
 ---
 
-## Overview
+# Overview
 
-GhostWall is an Open Source RF Privacy Firewall designed to help individuals, researchers, security professionals and organizations understand their exposure to modern RF sensing technologies.
+GhostWall is an Open Source RF Privacy Firewall focused on auditing, visibility and exposure assessment of environments that may be compatible with modern RF sensing technologies.
 
-The project focuses on:
+The project helps researchers, privacy advocates, network administrators and security professionals understand their wireless environment through:
 
-- RF visibility
-- Wi-Fi sensing exposure assessment
-- Device discovery
-- Infrastructure auditing
+- RF infrastructure discovery
+- Device inventory
+- Exposure assessment
 - Risk scoring
-- RF privacy awareness
+- RF sensing indicators
+- Threat intelligence
+- Technical reporting
 
-GhostWall does **not** claim to detect espionage or identify specific proprietary systems.
-
-Instead, it analyzes measurable indicators associated with infrastructures that may be compatible with Wi-Fi sensing and RF-based monitoring technologies.
+GhostWall is designed using a **privacy-first** approach where processing occurs locally whenever possible.
 
 ---
 
-## Why GhostWall?
+# Why GhostWall?
 
-Recent advances in wireless sensing technologies allow environments to be analyzed using radio signals.
-
-Research in areas such as:
+Recent advances in wireless sensing research have demonstrated that radio signals can be used to infer environmental conditions through techniques such as:
 
 - Wi-Fi Sensing
 - Channel State Information (CSI)
 - Device-Free Sensing
-- Radio Tomographic Imaging
 - RF Fingerprinting
+- Radio Tomographic Imaging
 
-has demonstrated that movement, occupancy and environmental changes can be inferred from wireless signals.
+GhostWall provides transparency and visibility into RF environments by identifying indicators associated with infrastructures that may be compatible with these technologies.
 
-GhostWall was created to provide transparency, visibility and risk assessment for these environments.
+The goal is awareness, auditing and exposure assessment.
 
 ---
 
-## Project Status
+# Project Status
 
-⚠️ Experimental Research Project
+⚠️ **Experimental Research Project**
 
 GhostWall is currently under active development.
 
-Features, detection models and scoring algorithms may evolve as research progresses.
+Features, scoring algorithms and detection methodologies may evolve as research advances.
 
-| Feature | Status |
-|----------|---------|
+| Component | Status |
+|------------|---------|
 | Dashboard | ✅ Implemented |
+| REST API | ✅ Implemented |
 | Device Inventory | ✅ Implemented |
 | RSIE Engine | ✅ Implemented |
-| Alert Center | ✅ Implemented |
+| Exposure Assessment | ✅ Implemented |
 | Reporting Engine | ✅ Implemented |
-| RF Exposure Scoring | ✅ Implemented |
 | Threat Intelligence | 🚧 In Progress |
-| RF Discovery Engine | 🚧 In Progress |
 | RF Fingerprinting | 🚧 In Progress |
-| Router Agent (OpenWRT) | 📋 Planned |
-| Mobile Application | 📋 Planned |
+| OpenWRT Agent | 📋 Planned |
 | Community Signatures | 📋 Planned |
+| Mobile Application | 📋 Planned |
 
 ---
 
 # Core Principles
 
-GhostWall is built around four principles:
-
-### Visibility
+## Visibility
 
 Understand what RF-capable devices exist within an environment.
 
-### Transparency
+## Transparency
 
-Provide evidence-based analysis rather than assumptions.
+Provide evidence-based analysis instead of assumptions.
 
-### Privacy
+## Privacy
 
-Keep data processing local whenever possible.
+Keep data processing local by default.
 
-### Research
+## Research
 
-Advance understanding of RF sensing exposure through open collaboration.
+Advance RF privacy awareness through open-source collaboration.
 
 ---
 
 # What GhostWall Does
 
-### RF Discovery
+## RF Discovery Engine
 
-Identify devices visible within the environment.
+Discovers and inventories wireless infrastructure.
 
 Examples:
 
 - Access Points
+- Wireless Clients
 - ESP32 Devices
 - Raspberry Pi Systems
-- Wireless IoT Devices
+- Broadcom-Based Hardware
 - RF Infrastructure Components
-
----
-
-### RF Exposure Assessment
-
-Evaluate environmental characteristics that may facilitate RF sensing.
-
-Examples:
-
-- Coverage density
-- Device placement
-- RF propagation conditions
-- Infrastructure concentration
-
----
-
-### RSIE Engine
-
-RF Sensing Indicators of Exposure.
-
-GhostWall evaluates indicators associated with infrastructures commonly used in RF sensing research.
-
-Examples:
-
-- CSI-compatible hardware
-- Multi-node deployments
-- Continuous operation patterns
-- MQTT telemetry
-- UDP telemetry flows
-
----
-
-### Device Inventory
-
-Maintain a centralized inventory of observed devices.
 
 Collected information may include:
 
 - MAC Address
 - Vendor
+- SSID
+- BSSID
 - RSSI
 - Channel
+- Security Type
 - Device Type
-- Risk Indicators
+- Activity Status
 
 ---
 
-### Reporting Engine
+## RF Fingerprinting Engine
 
-Generate professional reports in:
+Behavioral analysis of wireless devices.
 
-- HTML
-- JSON
-- PDF (planned)
+Capabilities include:
 
-Reports include:
+- Beacon Analysis
+- Channel Utilization
+- RSSI Stability
+- Broadcast Frequency
+- Probe Request Analysis
 
-- Exposure Scores
-- Risk Indicators
-- Device Inventory
-- Recommendations
-
----
-
-### Threat Intelligence
-
-Local and community-driven RF signature database.
-
-Supports:
-
-- Signature Versioning
-- Integrity Validation
-- Community Research Contributions
+The objective is to generate behavioral fingerprints that support risk evaluation.
 
 ---
 
-# RSIE Rules
+## RSIE Engine
 
-GhostWall uses the RF Sensing Indicators of Exposure framework.
+### RF Sensing Indicators of Exposure
+
+GhostWall evaluates indicators associated with infrastructures commonly observed in RF sensing research.
 
 Current baseline indicators include:
 
@@ -204,55 +160,162 @@ Current baseline indicators include:
 | GW-RF-004 | High-frequency UDP telemetry |
 | GW-RF-005 | MQTT telemetry patterns |
 | GW-RF-010 | Potential sensing cluster characteristics |
-| GW-FP-001 | False positive reduction |
+| GW-FP-001 | False-positive reduction |
 
-These indicators contribute to overall risk and exposure scoring.
+These indicators contribute to overall risk assessment.
+
+---
+
+## RF Exposure Scanner
+
+Calculates environmental exposure metrics.
+
+Examples:
+
+- Wi-Fi Coverage Density
+- Access Point Concentration
+- RF Density
+- Device Distribution
+- Spatial Exposure Factors
+
+Output:
+
+```text
+RF Exposure Score
+0 - 100
+```
+
+---
+
+## Device Inventory
+
+Centralized inventory of observed infrastructure.
+
+Tracks:
+
+- Device Identity
+- Hardware Type
+- Risk Indicators
+- Exposure Factors
+- Operational Characteristics
+
+---
+
+## Threat Intelligence
+
+Local and community-driven RF signature database.
+
+Supports:
+
+- Signature Versioning
+- Vendor Identification
+- Risk Classification
+- JSON Import/Export
+- Community Research Contributions
+
+---
+
+## Reporting Engine
+
+Generate professional reports in:
+
+- JSON
+- HTML
+- PDF (planned)
+
+Reports include:
+
+- Device Inventory
+- Risk Scores
+- Exposure Scores
+- Indicators
+- Recommendations
 
 ---
 
 # Architecture
 
 ```text
-Dashboard
-    │
-    ▼
-REST API
-    │
-    ▼
-RSIE Engine
-    │
-    ├── Device Inventory
-    ├── Threat Intelligence
-    ├── Reporting Engine
-    └── Exposure Assessment
+Scanner Layer
+      │
+      ▼
+Storage Layer
+      │
+      ▼
+Risk Engine
+      │
+      ├── Threat Intelligence
+      ├── Exposure Scanner
+      └── Reporting Engine
+                │
+                ▼
+              REST API
+                │
+                ▼
+      Desktop & Mobile Clients
 ```
+
+For detailed architecture:
+
+📖 See: `ARCHITECTURE.md`
 
 ---
 
 # Technology Stack
 
-## Frontend
-
-- React
-- TypeScript
-- Vite
-
 ## Backend
 
-- Node.js
-- Express
+- Rust
+- Axum
+- Tokio
+
+## Desktop
+
+- Tauri
+- React
+- TypeScript
+
+## Mobile
+
+- Flutter
 
 ## Database
 
-- Local Storage Layer
-- Drizzle ORM
+- SQLite
 
-## Future Stack
+## Containerization
 
-- Rust Core Engine
-- OpenWRT Agent
-- Mobile Client
-- PostgreSQL Support
+- Docker
+
+## Security
+
+- AES-256-GCM
+- Ed25519
+- SHA-256
+- TLS 1.3
+
+---
+
+# REST API
+
+GhostWall provides a REST API for integrations and automation.
+
+Available endpoints:
+
+```http
+GET    /api/health
+POST   /api/scan
+GET    /api/devices
+GET    /api/devices/:id
+POST   /api/risk/evaluate
+GET    /api/exposure
+GET    /api/threat-intel
+POST   /api/reports
+```
+
+For complete API documentation:
+
+📖 See: `API.md`
 
 ---
 
@@ -264,13 +327,19 @@ Coming Soon
 
 ---
 
+## Devices
+
+Coming Soon
+
+---
+
 ## Exposure Map
 
 Coming Soon
 
 ---
 
-## Device Inventory
+## Threat Intelligence
 
 Coming Soon
 
@@ -285,38 +354,71 @@ git clone https://github.com/NaiCodeBr/ghostwall.git
 cd ghostwall
 ```
 
-## Install Dependencies
+## Build Backend
 
 ```bash
+cargo build --release
+```
+
+## Install Dashboard Dependencies
+
+```bash
+cd dashboard
 npm install
+cd ..
 ```
 
-## Start Development Environment
+## Run API
 
 ```bash
-npm run dev
+cd api
+cargo run --bin ghostwall-api
 ```
 
-Application will be available at:
+API available at:
 
 ```text
-http://localhost:3000
+http://localhost:8080
 ```
+
+## Run Desktop Dashboard
+
+```bash
+cd dashboard
+npm run tauri dev
+```
+
+## Run Mobile App
+
+```bash
+cd mobile
+flutter run
+```
+
+For complete installation instructions:
+
+📖 See: `INSTALLATION.md`
 
 ---
 
 # Security Philosophy
 
-GhostWall follows a privacy-first approach.
+GhostWall follows a privacy-first design.
 
-Goals:
+Security objectives:
 
 - Local-first processing
 - Minimal data collection
-- Transparent analysis
-- Open-source reviewability
+- Explicit consent for external communication
+- Open-source transparency
+- Auditable security controls
 
-Cryptographic protections and secure communications will continue to evolve as the platform matures.
+Security mechanisms include:
+
+- AES-256-GCM encryption
+- Ed25519 signatures
+- SHA-256 hashing
+- TLS 1.3 communications
 
 ---
 
@@ -326,13 +428,26 @@ GhostWall is NOT:
 
 - A Wi-Fi jammer
 - A radio interference tool
-- A surveillance platform
-- A proof-of-espionage detector
+- A signal disruption platform
+- A surveillance system
 - A CSI collection framework
-- A signal disruption system
-- A tool to identify specific proprietary platforms
+- A proof-of-espionage detector
+- A tool that identifies proprietary systems with certainty
 
-GhostWall focuses on visibility and exposure assessment.
+GhostWall focuses on visibility, auditing and exposure assessment.
+
+---
+
+# Limitations
+
+GhostWall does not claim to:
+
+- Detect espionage
+- Identify specific proprietary RF sensing platforms
+- Confirm malicious intent
+- Prove surveillance activity
+
+GhostWall provides indicators and exposure assessments based on observable characteristics.
 
 ---
 
@@ -341,6 +456,7 @@ GhostWall focuses on visibility and exposure assessment.
 ## Version 0.1
 
 - Dashboard
+- REST API
 - RSIE Engine
 - Device Inventory
 - Reporting
@@ -350,13 +466,47 @@ GhostWall focuses on visibility and exposure assessment.
 - Threat Intelligence
 - Community Signatures
 - Enhanced Discovery
+- Advanced Fingerprinting
 
 ## Version 1.0
 
 - OpenWRT Agent
 - Mobile Applications
 - Distributed Analysis
-- Advanced RF Exposure Assessment
+- Enhanced Exposure Modeling
+
+---
+
+# Documentation
+
+Project documentation includes:
+
+- API.md
+- ARCHITECTURE.md
+- INSTALLATION.md
+- THREAT_MODEL.md
+- CONTRIBUTING.md
+- SECURITY.md
+
+---
+
+# Research References
+
+GhostWall is inspired by publicly available research in:
+
+- Wi-Fi Sensing
+- Channel State Information (CSI)
+- RF Fingerprinting
+- Device-Free Sensing
+- Wireless Environmental Monitoring
+
+Reference projects:
+
+- https://github.com/ruvnet/RuView
+- https://github.com/StevenMHernandez/ESP32-CSI-Tool
+- https://github.com/seemoo-lab/nexmon_csi
+
+GhostWall is an independent project and is not affiliated with any of the above projects.
 
 ---
 
@@ -370,6 +520,7 @@ Areas of interest:
 - Wireless Networking
 - Security Engineering
 - Privacy Technologies
+- Rust Development
 - Open Source Development
 
 Please review:
@@ -378,27 +529,7 @@ Please review:
 - SECURITY.md
 - CODE_OF_CONDUCT.md
 
-before submitting pull requests.
-
----
-
-# Research References
-
-The project is inspired by publicly available research and open-source initiatives in:
-
-- Wi-Fi Sensing
-- Channel State Information (CSI)
-- RF Fingerprinting
-- Device-Free Sensing
-- Wireless Environmental Monitoring
-
-Examples:
-
-- https://github.com/ruvnet/RuView
-- https://github.com/StevenMHernandez/ESP32-CSI-Tool
-- https://github.com/seemoo-lab/nexmon_csi
-
-GhostWall is an independent project and is not affiliated with any of the above initiatives.
+before opening pull requests.
 
 ---
 
@@ -412,10 +543,10 @@ See LICENSE for details.
 
 <div align="center">
 
-### GhostWall
+## GhostWall
 
-Open Source RF Privacy Firewall
+### Open Source RF Privacy Firewall
 
-Built for visibility, transparency and RF privacy research.
+Built for Visibility, Research and RF Privacy.
 
 </div>
